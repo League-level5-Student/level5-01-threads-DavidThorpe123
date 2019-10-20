@@ -12,13 +12,14 @@ public Worker(ConcurrentLinkedQueue<Task> taskQueue) {
 		// TODO Auto-generated method stub
 		while(taskQueue.isEmpty() == false) {
 			
-			taskQueue.remove();
+			taskQueue.remove().perform();
+			
 		}
 	}
 	@Override
 	public void perform() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("working");
 	}
 
 
