@@ -14,9 +14,6 @@ public class OlympicRings_Threaded {
 		tammy.setSpeed(10);
 		sammy.setSpeed(10);
 		
-		Thread r1 = new Thread(() -> timmy.setX((int) drawX));
-		
-		Thread r11 = new Thread(() -> timmy.setY((int) drawY));
 		Thread r2 = new Thread(() -> tammy.move(400));
 		Thread r3 = new Thread(() -> sammy.move(400));
 
@@ -24,5 +21,9 @@ public class OlympicRings_Threaded {
 		r11.start();
 		r2.start();
 		r3.start();
+	}
+	public void moveInCircle(Robot r) {
+		r.setX(newX);
+		
 	}
 }
